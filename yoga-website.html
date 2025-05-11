@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga 🧘‍♀️</title>
+    <style>
+        body {
+            background: rgb(211, 164, 90);
+            margin-top: 30px;
+        }
+
+        h1,
+        h2,
+        footer {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+
+
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid rgb(133, 125, 15);
+            background: rgb(231, 228, 189);
+            border-radius: 7px;
+            font-size: 17px;
+            padding: 20px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: rgb(231, 228, 189);
+            background: rgb(211, 164, 90);
+
+        }
+
+        p {
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        footer {
+            margin: 15px;
+            font-family: monospace;
+        }
+
+        .content {
+            max-width: 600px;
+            background: rgb(196, 194, 152);
+            padding: 20px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .dark-button {
+            font-size: 12px;
+            background: rgb(32, 23, 109);
+            border: 1px solid rgb(32, 23, 109);
+            color: white;
+            padding: 10px;
+
+        }
+
+        .dark-button:hover {
+            color: rgb(32, 23, 109);
+            background: rgb(196, 194, 152);
+        }
+
+        .intro-picture {
+            transition: all 150ms ease-in-out;
+        }
+
+        .intro-picture:hover {
+            filter: contrast(65%);
+            transform: scale(1.2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+            margin: 20px 0;
+
+        }
+
+        .grid img {
+            width: 100%;
+            aspect-ratio: auto;
+            transition: all 150ms ease-in-out;
+
+        }
+
+        .grid img:hover {
+            filter: contrast(80%);
+            transform: scale(2);
+        }
+
+        .dark {
+            background: black;
+            color: white;
+        }
+
+        .dark .content {
+            background: rgb(31, 20, 128);
+
+        }
+
+        .dark a {
+            color: rgb(198, 133, 133);
+        }
+
+        .dark footer {
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button class="dark-button">Dark theme</button>
+    <div class="content">
+        <h1>🧘‍♀️ Yoga 🌞 </h1>
+        <h2>My favorite hobby
+        </h2>
+        <a href="https://en.wikipedia.org/wiki/Yoga" target="_blank">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/921/original/yoga6.jpeg?1734284203"
+                alt="Woman doing Yoga" class="intro-picture" />
+        </a>
+        <div class="grid">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/957/original/yoga2.jpg?1734302091"
+                alt="Yoga with dog" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/956/original/yoga3.jpg?1734301833"
+                alt="Yoga with dog" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/949/original/yoga7.png?1734301542"
+                alt="Yoga with dog" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/152/922/original/yoga6.jpg?1734285454"
+                alt="Yoga with dog" />
+        </div>
+
+        <p>
+            Yoga is a group of physical, mental, and spiritual practices or disciplines that originated in ancient
+            India, aimed at controlling body and mind to attain various salvation goals, as practiced in the Hindu,
+            Jain,
+            and Buddhist traditions.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Yoga" target="_blank">📖 Read on Wikipedia</a>
+        <button class="practice-button">Practice Yoga</button>
+    </div>
+    <footer>
+        Coded by Jessica Nardy with HTML, CSS and JavaScript</a>
+    </footer>
+    <script>
+        function change() {
+            let body = document.querySelector("body");
+
+
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+
+
+            let h1 = document.querySelector("h1");
+            if (body.classList.contains("dark")) {
+                h1.innerHTML = "🧘‍♀️ Yoga 🌝";
+            } else {
+                h1.innerHTML = "🧘‍♀️ Yoga 🌞";
+            }
+        }
+
+
+        let button = document.querySelector(".dark-button");
+        button.addEventListener("click", change);
+
+        function practice() {
+            let question = prompt("Have you ever practiced Yoga before?");
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email?");
+
+            alert("Thank you, " + name + "! We will be in touch very soon with more details.");
+        }
+        let button2 = document.querySelector(".practice-button");
+        button2.addEventListener("click", practice);
+
+
+    </script>
+</body>
+
+</html>
